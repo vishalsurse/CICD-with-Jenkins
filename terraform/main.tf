@@ -3,7 +3,8 @@ resource "docker_image" "todo_image" {
 	keep_locally = false
 }
 
-resource "docker_container" "todo_container" {
+resource "docker_container" "todo_container" 
+{
 	image = docker_image.todo_image.name
 	name = "todoapp-container"
 	ports {
